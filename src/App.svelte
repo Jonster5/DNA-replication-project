@@ -12,11 +12,13 @@
 
 	const title = 'DNA Replication';
 
+	let checked: boolean = false;
+
 	const repsteps: Array<item> = [
 		{
 			title: 'Helicase Seperates the DNA strands',
 			text:
-				'The first step in DNA replication is to seperate the strands of DNA. An enzyme called <em>Helicase</em> takes care of that.',
+				'An enzyme called <em>Helicase</em> separates the incoming DNA in what is called a <em>Replication Fork</em>. This forms two strands of split DNA',
 			img: 'images/Helicase.svg',
 		},
 		{
@@ -34,7 +36,7 @@
 		{
 			title: 'Primase Applies RNA Primer to the DNA Strands',
 			text:
-				'<em>Primase</em> applies a small bit of RNA <em>primer</em> to the nucleotides. This is done many times on the <em>lagging strand.</em>',
+				'<em>Primase</em> applies a small bit of <em>RNA primer</em> to the nucleotides. This is done many times on the <em>lagging strand.</em>',
 			img: 'images/Primase.svg',
 		},
 		{
@@ -43,6 +45,18 @@
 			text:
 				"The enzyme <em>DNA Polymerase</em> can only add <em>nucleotides</em> in the <em>5' -> 3'</em> direction. This means the process is continous on the <em>Leading Strand</em>, but on the <em>Lagging Strand</em>, this must be done in small chunks called <em>Okazaki Fragments</em>",
 			img: 'images/PolymeraseWrite.svg',
+		},
+		{
+			title: 'DNA Polymerase Replaces the Primer and Proofreads the DNA',
+			text:
+				'<em>DNA Polymerase</em> then goes back and replaces all of the <em>RNA primer</em> with DNA, and checks the new DNA for any errors',
+			img: 'images/PolymeraseRead.svg',
+		},
+		{
+			title: 'Ligase Stitches it All Back Together',
+			text:
+				'Once the <em>DNA Polymerase</em> finished proofreading, a new enzyme called <em>Ligase</em> runs over the DNA and stiches all of the <em>Okazaki Fragments</em> into one continuous line. Now we have two identical copies of the original DNA',
+			img: 'images/Ligase.svg',
 		},
 	];
 
@@ -67,15 +81,40 @@
 			label: 'C',
 			title: "3' and 5'",
 			text:
-				"Each of the strands that makes up DNA has two ends, <em>5'</em> and <em>3'</em>. All DNA flows from the <em>5'</em> end to the <em>3'</em>.",
+				"Each of the strands that makes up DNA has two ends, <em>5'</em> and <em>3'</em>. All DNA flows from the <em>5'</em> end to the <em>3'</em>. A word to describe this behavior is <em>Antiparallel</em>",
 			img: 'images/3prime5prime.svg',
 		},
 		{
 			label: 'D',
 			title: 'Leading and Lagging Strands',
 			text:
-				"The <em>Leading Strand</em> is the strand of DNA that after being separated by <em>helicase</em>, flows out with the <em>5'</em> end first. The <em>Lagging Strand</em> is the strand that flows <em>3'</em> end out first ",
+				"The <em>Leading Strand</em> is the strand of DNA that after being separated by <em>helicase</em>, flows out with the <em>5'</em> end first. The <em>Lagging Strand</em> is the strand that flows <em>3'</em> end out first.",
 			img: 'images/leadlaggingstrands.svg',
+		},
+		{
+			label: 'E',
+			title: 'Okazaki Fragments',
+			text: '',
+			img: 'images/Okazaki.svg',
+		},
+		{
+			label: 'F',
+			title: 'Primase and RNA Primers',
+			text: '',
+			img: 'images/Primer.svg',
+		},
+		{
+			label: 'G',
+			title:
+				'Origin of Replication, Replication Fork, and Replication Bubble',
+			text: '',
+			img: 'images/ReplicationORR.svg',
+		},
+		{
+			label: 'H',
+			title: 'Semi-Conservative and Central Dogma',
+			text: '',
+			img: 'images/Dogma.svg',
 		},
 	];
 
@@ -100,6 +139,7 @@
 					step={i + 1}
 					height={repheight}
 					{img}
+					{checked}
 				/>
 			{/each}
 		</section>
@@ -114,10 +154,19 @@
 					step={label}
 					height={termheight}
 					{img}
+					{checked}
 				/>
 			{/each}
 		</section>
 	</div>
+	<label>
+		{#if !checked}
+			Show all descriptions
+		{:else}
+			Hide all descriptions
+		{/if}
+		<input type="checkbox" bind:checked />
+	</label>
 </main>
 
 <style lang="scss">
@@ -126,7 +175,7 @@
 
 	main {
 		@include container;
-		background: #01010111;
+		background: #01010155;
 	}
 
 	div {
@@ -139,5 +188,13 @@
 		width: 45%;
 		display: flex;
 		flex-direction: column;
+	}
+
+	label {
+		position: absolute;
+		top: 2vh;
+		right: 2vw;
+		color: white;
+		font-family: 'Courier New', Courier, monospace;
 	}
 </style>

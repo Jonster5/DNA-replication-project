@@ -11,12 +11,27 @@
 
 	let showImage = true;
 	let showText = false;
+
+	export let checked = false;
+
+	let free = true;
+
+	$: if (checked || !checked) free = false;
+
+	$: if (checked && showImage && !showText && !free) {
+		showImage = false;
+		setTimeout(() => (showText = true), 360);
+	} else if (!checked && showText && !showImage && !free) {
+		showText = false;
+		setTimeout(() => (showImage = true), 360);
+	}
 </script>
 
 <div
 	class="c"
 	style={`height: ${height}px`}
 	on:click={() => {
+		free = true;
 		if (showImage && !showText) {
 			showImage = false;
 			setTimeout(() => (showText = true), 360);
@@ -80,8 +95,12 @@
 		font-family: 'Lato';
 
 		&:hover {
-			background: $filterbg;
+			// background: $filterbg;
 			cursor: pointer;
+
+			h3 {
+				color: $title;
+			}
 		}
 	}
 
