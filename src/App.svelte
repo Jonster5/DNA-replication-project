@@ -60,14 +60,12 @@
 		},
 	];
 
-	const repheight = 230;
-
 	const terms: Array<item> = [
 		{
 			label: 'A',
 			title: "Chargaff's Rule",
 			text:
-				"Chargaff's Rule states that the amount of <em>A</em> bases is always equal to the amount of <em>T</em> bases, and the amount of <em>G</em> bases is equal to the amount of <em>C</em> bases.",
+				"Chargaff's Rule states that the amount of <em>A</em> bases is always equal to the amount of <em>T</em> bases, and the amount of <em>G</em> bases is equal to the amount of <em>C</em> bases",
 			img: 'images/Chargaff.svg',
 		},
 		{
@@ -79,45 +77,57 @@
 		},
 		{
 			label: 'C',
-			title: "3' and 5'",
+			title: "3' & 5', and Complimentary Strands",
 			text:
-				"Each of the strands that makes up DNA has two ends, <em>5'</em> and <em>3'</em>. All DNA flows from the <em>5'</em> end to the <em>3'</em>. A word to describe this behavior is <em>Antiparallel</em>",
+				"Each of the strands that makes up DNA has two ends, <em>5'</em> and <em>3'</em>. All DNA flows from the <em>5'</em> end to the <em>3'</em>. <em>Complimentary DNA</em> are when two DNA strands' sequence of <em>nucleotides</em> match one another",
 			img: 'images/3prime5prime.svg',
 		},
 		{
 			label: 'D',
-			title: 'Leading and Lagging Strands',
+			title: 'Leading Strand, Lagging Strand, and Antiparallel',
 			text:
-				"The <em>Leading Strand</em> is the strand of DNA that after being separated by <em>helicase</em>, flows out with the <em>5'</em> end first. The <em>Lagging Strand</em> is the strand that flows <em>3'</em> end out first.",
+				"The <em>Leading Strand</em> is the strand of DNA that after being separated by <em>helicase</em>, flows out with the <em>5'</em> end first. The <em>Lagging Strand</em> is the strand that flows <em>3'</em> end out first. This type of behavior is called <em>Antiparallel</em>",
 			img: 'images/leadlaggingstrands.svg',
 		},
 		{
 			label: 'E',
 			title: 'Okazaki Fragments',
-			text: '',
+			text:
+				"On the <em>lagging strand</em>, <em>DNA Polymerase</em> can't apply <em>nucleotides</em> continuously like it does on the <em>leading strand</em>, so it does it in small chunks called <em>Okazaki Fragments</em>",
 			img: 'images/Okazaki.svg',
 		},
 		{
 			label: 'F',
 			title: 'Primase and RNA Primers',
-			text: '',
+			text:
+				'Before <em>DNA Polymerase</em> can start laying down <em>nucleotides</em>, it needs to know where to start. The enzyme <em>Primase</em> applies a small bit of <em>complimentary</em> RNA called a <em>RNA Primer</em>, to the DNA strand so <em>DNA Polymerase</em> can bind to it',
 			img: 'images/Primer.svg',
 		},
 		{
 			label: 'G',
 			title:
 				'Origin of Replication, Replication Fork, and Replication Bubble',
-			text: '',
+			text:
+				'The <em>Origin of Replication</em> is the point in the DNA where <em>helicase</em> creates a <em>Replication fork</em>, which is where the DNA splits into two strands. The bubble-like shape the two DNA strands create is called the <em>Replication Bubble</em>',
 			img: 'images/ReplicationORR.svg',
 		},
 		{
-			label: 'H',
-			title: 'Semi-Conservative and Central Dogma',
-			text: '',
+			label: 'I',
+			title: 'Central Dogma',
+			text:
+				'<em>Central Dogma</em> is the process of taking the information stored within DNA, and using it to create a functional product, such as a protein',
 			img: 'images/Dogma.svg',
+		},
+		{
+			label: 'J',
+			title: 'Semiconservative',
+			text:
+				'DNA Replication is reffered to as a <em>Semiconservative</em> process, because after converting one line of DNA into two new ones, each of the two new lines contain half of the original',
+			img: 'images/Semiconservative.svg',
 		},
 	];
 
+	const repheight = 230;
 	const termheight = 230;
 </script>
 
@@ -175,7 +185,7 @@
 
 	main {
 		@include container;
-		background: #01010155;
+		// background: #01010188;
 	}
 
 	div {

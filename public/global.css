@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Lato', Arial, Helvetica, sans-serif;
-	background: url('../images/wallpaper.jpg') fixed no-repeat;
+	background: url('../images/background.svg') fixed no-repeat;
 	/* background: black; */
 	background-size: 100%;
 }
