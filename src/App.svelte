@@ -26,14 +26,27 @@
 			img: 'images/Topoisomerase.svg',
 		},
 		{
-			title: 'SSBPs are applied to each nucleotide',
+			title: 'SSBPs Are Attached to Each Nucleotide',
 			text:
 				'After being split by helicase, <em>SSBPs</em> must applied to each nucleotide in order to prevent them from reform <em>hydrogen bonds</em>',
 			img: 'images/SSBP.svg',
 		},
+		{
+			title: 'Primase Applies RNA Primer to the DNA Strands',
+			text:
+				'<em>Primase</em> applies a small bit of RNA <em>primer</em> to the nucleotides. This is done many times on the <em>lagging strand.</em>',
+			img: 'images/Primase.svg',
+		},
+		{
+			title:
+				"DNA Polymerase Adds Nucleotides to the 3' End of the Primer",
+			text:
+				"The enzyme <em>DNA Polymerase</em> can only add <em>nucleotides</em> in the <em>5' -> 3'</em> direction. This means the process is continous on the <em>Leading Strand</em>, but on the <em>Lagging Strand</em>, this must be done in small chunks called <em>Okazaki Fragments</em>",
+			img: 'images/PolymeraseWrite.svg',
+		},
 	];
 
-	const repheight = 200;
+	const repheight = 230;
 
 	const terms: Array<item> = [
 		{
@@ -52,14 +65,21 @@
 		},
 		{
 			label: 'C',
-			title: "3' & 5'",
+			title: "3' and 5'",
 			text:
 				"Each of the strands that makes up DNA has two ends, <em>5'</em> and <em>3'</em>. All DNA flows from the <em>5'</em> end to the <em>3'</em>.",
 			img: 'images/3prime5prime.svg',
 		},
+		{
+			label: 'D',
+			title: 'Leading and Lagging Strands',
+			text:
+				"The <em>Leading Strand</em> is the strand of DNA that after being separated by <em>helicase</em>, flows out with the <em>5'</em> end first. The <em>Lagging Strand</em> is the strand that flows <em>3'</em> end out first ",
+			img: 'images/leadlaggingstrands.svg',
+		},
 	];
 
-	const termheight = 200;
+	const termheight = 230;
 </script>
 
 <svelte:head>

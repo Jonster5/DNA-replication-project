@@ -121,7 +121,7 @@
 		margin: auto auto;
 		word-wrap: break-word;
 		width: 50%;
-		line-height: 30px;
+		line-height: 25px;
 		padding: 3vh 3vw;
 	}
 </style>
